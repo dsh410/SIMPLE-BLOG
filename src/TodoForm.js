@@ -20,7 +20,7 @@ function TodoForm({ addTodo },props ) {
           value={value}
           onChange={e => setValue(e.target.value)}
         />
-                <button className="btn btn-post" onClick={()=> props.isPosting()} >create post +</button>
+                <button className="btn btn-post" onClick={()=> props.isPosting()} > post </button>
         </form>
             
         </div>
