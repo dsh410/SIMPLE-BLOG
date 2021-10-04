@@ -7,32 +7,32 @@ import { useState } from 'react';
 
 
 const App = () => {
-  // const [todos, setTodos] = useState([
-  //   {
-  //     text: "Learn about React",
-  //     isCompleted: false
-  //   }
-  //   ,
-  //   {
-  //     text: "Meet friend for lunch",
-  //     isCompleted: false
-  //   },
-  //   {
-  //     text: "Build really cool todo app",
-  //     isCompleted: false
-  //   }
-  // ]);
+  const [todos, setTodos] = useState([
+    {
+      text: "Learn about React",
+      isCompleted: false
+    }
+    ,
+    {
+      text: "Meet friend for lunch",
+      isCompleted: false
+    },
+    {
+      text: "Build really cool todo app",
+      isCompleted: false
+    }
+  ]);
   return (
     <div className="App">
       <NavBar title='Simple blog.' />
-      {/* {todos.map((todo, index) => (
+      {todos.map((todo, index) => (
           <DisplayTodo
             key={index}
             index={index}
             todo={todo}
            
           />
-        ))} */}
+        ))}
     </div>
   );
 }
