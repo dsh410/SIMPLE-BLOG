@@ -17,8 +17,6 @@ function Todo({ todo, index, completeTodo, UncompleteTodo, removeTodo, likedTodo
       
        <p> {todo.text}</p>
         <div>
-           
-      
                               
         <AiFillHeart className="heart-shape"
             style={{ color: todo.isLiked ? "#F19CBB" : "#46444F", }}

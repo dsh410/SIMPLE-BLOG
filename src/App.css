@@ -106,6 +106,9 @@
     .trash-can{
       font-size:2em;
     }
+    .trash-can:hover{
+      color:orange; 
+    }
     .plus-symbol{
       margin-left:90%;
       color:white;
