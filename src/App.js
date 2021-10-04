@@ -1,6 +1,7 @@
 import NavBar from './NavBar';
 import Todo from "./Todo";
 import TodoForm from "./TodoForm";
+import ControlPost from "./ControlPost";
 import './App.css';
 import { useState } from 'react';
 // import "bootstrap/dist/css/bootstrap.min.css";
@@ -10,19 +11,23 @@ import { useState } from 'react';
 const App = () => {
   const [todos,setTodos] = useState([
     {
+      title:"Get Started",
       text: "Learn about React",
       isCompleted: false
     }
     ,
     {
+      title:"Build your network",
       text: "Meet friend for lunch",
       isCompleted: false
     },
     {
+      title:'Create that app',
       text: "Build really cool todo app",
       isCompleted: false
     }
   ]);
+  const [post,setPost] = useState(false)
   const addTodo = text => {
     const newTodos = [ {text} ,...todos ];
     setTodos(newTodos);
@@ -34,19 +39,6 @@ const App = () => {
     setTodos(newTodos);
   };
 
- 
-
-  const completeTodo = index => {
-    const newTodos = [...todos];
-    newTodos[index].isCompleted = true;
-    setTodos(newTodos);
-  };
-
-  const UncompleteTodo = index => {
-    const newTodos = [...todos];
-    newTodos[index].isCompleted = false;
-    setTodos(newTodos);
-  };
 
   const likedTodo = index => {
     const newTodos = [...todos];
@@ -60,12 +52,21 @@ const App = () => {
     setTodos(newTodos)
   }
 
+  
+
  
   return (
     <div className="App">
       <NavBar title='Simple blog.' />
       
-         <div className="todo-list">
+      <div className="todo-list">
+
+        <ControlPost addTodo={addTodo} todos={todos}  removeTodo={removeTodo}
+            likedTodo={likedTodo}
+          unLikedTodo={unLikedTodo}
+        
+        />
+        
          <TodoForm addTodo={addTodo}    />
     
         {todos.map((todo, index) => (
@@ -73,8 +74,7 @@ const App = () => {
             key={index}
             index={index}
             todo={todo}
-            completeTodo={completeTodo}
-            UncompleteTodo={UncompleteTodo }
+           
             removeTodo={removeTodo}
             likedTodo={likedTodo}
             unLikedTodo={unLikedTodo}

@@ -6,7 +6,7 @@ function Todo({ todo, index, completeTodo, UncompleteTodo, removeTodo, likedTodo
     return (
 
         <div>
-            <h4>title:{todo.title}</h4> 
+            <h4 className="post-title">title:{todo.title}</h4> 
       <div
         className="todo"
         style={{ textDecoration: todo.isCompleted ? "line-through" : "" }} 
@@ -15,15 +15,11 @@ function Todo({ todo, index, completeTodo, UncompleteTodo, removeTodo, likedTodo
        <p> {todo.text}</p>
         <div>
            
-        <button
-            onClick={() => todo.isCompleted ? UncompleteTodo(index) :
-                completeTodo(index)} >
-            {todo.isCompleted ? 'uncheck' : 'check'}
-        </button>
+      
                               
         <button className="heart-shape"
-            style={{ backgroundColor: todo.isLiked ? "#F19CBB" : "gray" }}
-            onClick={() => todo.isLiked ? unLikedTodo(index) : likedTodo(index)} >liked</button> 
+            style={{ backgroundColor: todo.isLiked ? "#F19CBB" : "#46444F",color:"#F19CBB" }}
+                        onClick={() => todo.isLiked ? unLikedTodo(index) : likedTodo(index)} >{todo.isLiked?'Unlike' : 'Heart'}</button>
     
         <button onClick={() => removeTodo(index)}>x</button>
         </div>

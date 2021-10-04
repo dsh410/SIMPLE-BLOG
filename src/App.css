@@ -73,6 +73,8 @@
       padding: 5px;
       margin: 0 auto;
       margin-top:5%;
+      border:4px dotted white;
+      
     }
     
     .todo {
@@ -84,7 +86,18 @@
       font-size: 12px;
       justify-content: space-between;
       margin-bottom: 6px;
-      padding: 3px 10px;
+      padding: 3% 5%;
+      
+    }
+
+    .btn-post{
+      margin-left:75% ;
+      margin-top: 8%;
+    
+    }
+
+    .post-title{
+      color:white;
     }
   
   

@@ -12,15 +12,17 @@ function TodoForm({ addTodo } ,props) {
   
     return (
         <div>
-      <form onSubmit={handleSubmit}>
-        <input
+            <form onSubmit={handleSubmit}>
+          
+        {/* <input
           type="text"
           className="input"
           value={value}
           onChange={e => setValue(e.target.value)}
-        />
+        /> */}
+                <button className="btn btn-post">create post +</button>
         </form>
-            <button onClick={() => props.logIn}>log in</button>
+            
         </div>
     );
   }
