@@ -1,6 +1,5 @@
 import NavBar from './NavBar';
-import Todo from "./Todo";
-import TodoForm from "./TodoForm";
+
 import ControlPost from "./ControlPost";
 import './App.css';
 import { useState } from 'react';
@@ -27,7 +26,7 @@ const App = () => {
       isCompleted: false
     }
   ]);
-  const [post,setPost] = useState(false)
+  const [post,setPost] = useState(true)
   const addTodo = text => {
     const newTodos = [ {text} ,...todos ];
     setTodos(newTodos);
@@ -51,6 +50,9 @@ const App = () => {
     newTodos[index].isLiked= false;
     setTodos(newTodos)
   }
+  const isPosting = () => {
+    setPost(false);
+  }
 
   
 
@@ -64,23 +66,12 @@ const App = () => {
         <ControlPost addTodo={addTodo} todos={todos}  removeTodo={removeTodo}
             likedTodo={likedTodo}
           unLikedTodo={unLikedTodo}
+          post={post}
+          isPosting={isPosting}
         
         />
         
-         <TodoForm addTodo={addTodo}    />
-    
-        {todos.map((todo, index) => (
-          <Todo
-            key={index}
-            index={index}
-            todo={todo}
-           
-            removeTodo={removeTodo}
-            likedTodo={likedTodo}
-            unLikedTodo={unLikedTodo}
-          
-          />
-        ))}
+       
         
       </div>
     </div>

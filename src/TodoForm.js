@@ -14,13 +14,13 @@ function TodoForm({ addTodo } ,props) {
         <div>
             <form onSubmit={handleSubmit}>
           
-        {/* <input
+        <input
           type="text"
           className="input"
           value={value}
           onChange={e => setValue(e.target.value)}
-        /> */}
-                <button className="btn btn-post">create post +</button>
+        />
+                <button className="btn btn-post" onClick={()=>props.isPosting} >create post +</button>
         </form>
             
         </div>
