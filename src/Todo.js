@@ -1,4 +1,6 @@
 import { AiFillHeart } from 'react-icons/ai';
+import { RiDeleteBin2Line } from 'react-icons/ri';
+
 
 function Todo({ todo, index, completeTodo, UncompleteTodo, removeTodo, likedTodo, unLikedTodo },props) {
 
@@ -21,7 +23,7 @@ function Todo({ todo, index, completeTodo, UncompleteTodo, removeTodo, likedTodo
             style={{ color: todo.isLiked ? "#F19CBB" : "#46444F", }}
                         onClick={() => todo.isLiked ? unLikedTodo(index) : likedTodo(index)} ></AiFillHeart>
     
-        <button onClick={() => removeTodo(index)}>x</button>
+        <RiDeleteBin2Line className="trash-can" onClick={() => removeTodo(index)}></RiDeleteBin2Line>
         </div>
             </div>
             </div>
