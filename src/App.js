@@ -50,9 +50,8 @@ const App = () => {
     newTodos[index].isLiked= false;
     setTodos(newTodos)
   }
-  const isPosting = () => {
-    setPost(false);
-  }
+  const isPosting = () => setPost(true);
+  
 
   
 

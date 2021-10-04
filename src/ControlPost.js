@@ -4,7 +4,7 @@ import TodoForm from './TodoForm';
 const ControlPost = (props) => {
     return (
         <div>
-            { props.post ? <TodoForm isPosting={props.isPosting} addTodo={props.addTodo} /> :props.todos.map((todo, index) => (
+            { props.post ? <TodoForm isPosting={props.isPosting} index={props.index} addTodo={props.addTodo} /> :props.todos.map((todo, index) => (
       <Todo
         key={index}
         index={index}
