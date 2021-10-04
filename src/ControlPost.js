@@ -5,7 +5,7 @@ import { AiFillPlusSquare } from 'react-icons/ai';
 const ControlPost = (props) => {
     return (
         <div>
-            <AiFillPlusSquare className="plus-symbol"/>
+            <AiFillPlusSquare  className="plus-symbol"/>
             { props.post ? <TodoForm isPosting={props.isPosting} index={props.index} addTodo={props.addTodo} /> :props.todos.map((todo, index) => (
       <Todo
         key={index}
