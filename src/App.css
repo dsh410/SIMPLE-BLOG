@@ -98,7 +98,7 @@
     
     }
 
-    .post-title{
+    .post-title,label{
       color:white;
     }
 
@@ -122,19 +122,22 @@
       color:orange; 
     }
 
-    .text-area{
+    .text-area {
       width:80%;
-      height:90%;
-      border:2px solid red;
+   margin-left: 5%;
+      margin-top: 5%;
+      /* border:2px solid red; */
     }
 
-    .form{
-      border:2px solid purple;
+    .title-input{
+      margin-left: 5%;
+      /* border:2px solid purple; */
     }
 
     .control-div{
-      border:2px solid blue;
+      /* border:2px solid blue; */
       height:50%;
     }
+
   
   

@@ -28,7 +28,7 @@ const App = () => {
   ]);
 
 
-  const [post, setPost] = useState(true);
+  const [post, setPost] = useState(false);
 
 
   const addTodo = (title,text) => {

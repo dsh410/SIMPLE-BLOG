@@ -18,10 +18,11 @@ function TodoForm({ addTodo,isPosting } ) {
     return (
         
       <form onSubmit={handleSubmit} className="form">
-        <label>Title:</label>
+       
         <input type="text"
           className="title-input"
           value={blogTitle}
+          placeholder="Title"
           onChange={e => setBlogTitle(e.target.value)}
           
 
@@ -29,6 +30,7 @@ function TodoForm({ addTodo,isPosting } ) {
         <textarea
           type="text"
           className="text-area"
+          placeholder="Body..."
           value={blog}
             onChange={e => setBlog(e.target.value)}
             required
