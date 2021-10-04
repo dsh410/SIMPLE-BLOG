@@ -4,7 +4,7 @@ import { AiFillPlusSquare } from 'react-icons/ai';
 
 const ControlPost = (props) => {
     return (
-      <div>
+      <div className="control-div">
        
             <AiFillPlusSquare onClick={props.addPost} style={{visibility:!props.post ? 'visible' : 'hidden'}} className="plus-symbol"/>
            

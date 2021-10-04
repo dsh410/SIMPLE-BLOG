@@ -1,7 +1,8 @@
 import { useState } from "react";
 
-function TodoForm({ addTodo,isPosting,post } ) {
-    const [value, setValue] = useState("");
+function TodoForm({ addTodo,isPosting } ) {
+  const [value, setValue] = useState("");
+  const [blogTitle, setBlogTitle] = useState('');
   
     const handleSubmit = e => {
       e.preventDefault();
@@ -13,12 +14,16 @@ function TodoForm({ addTodo,isPosting,post } ) {
     
   
     return (
-        <div>
-            <form onSubmit={ handleSubmit }>
-          
-        <input
+        
+      <form onSubmit={handleSubmit} className="form">
+        <label>Title:</label>
+        <input type="text"
+          className="title-input"
+
+        />
+        <textarea
           type="text"
-          className="input"
+          className="text-area"
           value={value}
             onChange={e => setValue(e.target.value)}
             required
@@ -27,7 +32,7 @@ function TodoForm({ addTodo,isPosting,post } ) {
           <button onClick={isPosting}>back</button>
         </form>
             
-        </div>
+       
     );
   }
   

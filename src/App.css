@@ -74,6 +74,7 @@
       margin: 0 auto;
       margin-top:5%;
       border:4px dotted white;
+     
       
     }
     
@@ -117,6 +118,21 @@
 
     .plus-symbol:hover{
       color:orange; 
+    }
+
+    .text-area{
+      width:80%;
+      height:90%;
+      border:2px solid red;
+    }
+
+    .form{
+      border:2px solid purple;
+    }
+
+    .control-div{
+      border:2px solid blue;
+      height:50%;
     }
   
   
