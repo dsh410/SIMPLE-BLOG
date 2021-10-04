@@ -26,7 +26,11 @@ const App = () => {
       isCompleted: false
     }
   ]);
-  const [post,setPost] = useState(false)
+
+
+  const [post, setPost] = useState(true);
+
+
   const addTodo = text => {
     const newTodos = [ {text} ,...todos ];
     setTodos(newTodos);
@@ -50,7 +54,8 @@ const App = () => {
     newTodos[index].isLiked= false;
     setTodos(newTodos)
   }
-  const isPosting = () => setPost(false);
+  const isPosting = (e) => setPost(false);
+  const addPost = () => setPost(true);
   
 
   
@@ -67,6 +72,7 @@ const App = () => {
           unLikedTodo={unLikedTodo}
           post={post}
           isPosting={isPosting}
+          addPost={addPost}
         
         />
         

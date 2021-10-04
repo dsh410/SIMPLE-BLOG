@@ -3,7 +3,7 @@ import { RiDeleteBin2Line } from 'react-icons/ri';
 
 
 
-function Todo({ todo, index, completeTodo, UncompleteTodo, removeTodo, likedTodo, unLikedTodo },props) {
+function Todo({ todo, index,  removeTodo, likedTodo, unLikedTodo },props) {
 
     
     return (

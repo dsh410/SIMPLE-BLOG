@@ -4,9 +4,14 @@ import { AiFillPlusSquare } from 'react-icons/ai';
 
 const ControlPost = (props) => {
     return (
-        <div>
-            <AiFillPlusSquare  className="plus-symbol"/>
-            { props.post ? <TodoForm isPosting={props.isPosting} index={props.index} addTodo={props.addTodo} /> :props.todos.map((todo, index) => (
+      <div>
+       
+            <AiFillPlusSquare onClick={props.addPost} style={{visibility:!props.post ? 'visible' : 'hidden'}} className="plus-symbol"/>
+           
+        {
+          props.post ? <TodoForm isPosting={props.isPosting}  index={props.index} addTodo={props.addTodo} post={props.post} /> :
+          
+          props.todos.map((todo, index) => (
       <Todo
         key={index}
         index={index}

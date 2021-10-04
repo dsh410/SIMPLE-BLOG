@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function TodoForm({ addTodo },props ) {
+function TodoForm({ addTodo,isPosting,post } ) {
     const [value, setValue] = useState("");
   
     const handleSubmit = e => {
@@ -8,20 +8,23 @@ function TodoForm({ addTodo },props ) {
       if (!value) return;
       addTodo(value);
       setValue("");
+      isPosting()
     };
     
   
     return (
         <div>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={ handleSubmit }>
           
         <input
           type="text"
           className="input"
           value={value}
-          onChange={e => setValue(e.target.value)}
+            onChange={e => setValue(e.target.value)}
+            required
         />
-                <button className="btn btn-post" onClick={()=> props.isPosting()} > post </button>
+          <button className="btn btn-post"  > post </button>
+          <button onClick={isPosting}>back</button>
         </form>
             
         </div>
