@@ -26,7 +26,7 @@ const App = () => {
       isCompleted: false
     }
   ]);
-  const [post,setPost] = useState(true)
+  const [post,setPost] = useState(false)
   const addTodo = text => {
     const newTodos = [ {text} ,...todos ];
     setTodos(newTodos);

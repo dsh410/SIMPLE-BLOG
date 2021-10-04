@@ -1,4 +1,4 @@
-
+import { AiFillHeart } from 'react-icons/ai';
 
 function Todo({ todo, index, completeTodo, UncompleteTodo, removeTodo, likedTodo, unLikedTodo },props) {
 
@@ -17,9 +17,9 @@ function Todo({ todo, index, completeTodo, UncompleteTodo, removeTodo, likedTodo
            
       
                               
-        <button className="heart-shape"
-            style={{ backgroundColor: todo.isLiked ? "#F19CBB" : "#46444F",color:"#F19CBB" }}
-                        onClick={() => todo.isLiked ? unLikedTodo(index) : likedTodo(index)} >{todo.isLiked?'Unlike' : 'Heart'}</button>
+        <AiFillHeart className="heart-shape"
+            style={{ color: todo.isLiked ? "#F19CBB" : "#46444F", }}
+                        onClick={() => todo.isLiked ? unLikedTodo(index) : likedTodo(index)} ></AiFillHeart>
     
         <button onClick={() => removeTodo(index)}>x</button>
         </div>
