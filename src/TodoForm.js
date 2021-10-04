@@ -1,14 +1,16 @@
 import { useState } from "react";
 
 function TodoForm({ addTodo,isPosting } ) {
-  const [value, setValue] = useState("");
-  const [blogTitle, setBlogTitle] = useState('');
+  const [blog, setBlog] = useState("");
+  const [blogTitle,setBlogTitle]=useState("");
+ 
   
     const handleSubmit = e => {
       e.preventDefault();
-      if (!value) return;
-      addTodo(value);
-      setValue("");
+      if (!blog) return;
+      if (!blogTitle) return;
+      addTodo(blogTitle,blog);
+      setBlog("");
       isPosting()
     };
     
@@ -19,13 +21,16 @@ function TodoForm({ addTodo,isPosting } ) {
         <label>Title:</label>
         <input type="text"
           className="title-input"
+          value={blogTitle}
+          onChange={e => setBlogTitle(e.target.value)}
+          
 
         />
         <textarea
           type="text"
           className="text-area"
-          value={value}
-            onChange={e => setValue(e.target.value)}
+          value={blog}
+            onChange={e => setBlog(e.target.value)}
             required
         />
           <button className="btn btn-post"  > post </button>

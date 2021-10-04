@@ -9,7 +9,7 @@ const ControlPost = (props) => {
             <AiFillPlusSquare onClick={props.addPost} style={{visibility:!props.post ? 'visible' : 'hidden'}} className="plus-symbol"/>
            
         {
-          props.post ? <TodoForm isPosting={props.isPosting}  index={props.index} addTodo={props.addTodo} post={props.post} /> :
+          props.post ? <TodoForm isPosting={props.isPosting} title={props.title} setTitle={props.setTitle} index={props.index} addTodo={props.addTodo} post={props.post} /> :
           
           props.todos.map((todo, index) => (
       <Todo

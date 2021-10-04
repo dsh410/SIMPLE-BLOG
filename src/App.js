@@ -31,10 +31,11 @@ const App = () => {
   const [post, setPost] = useState(true);
 
 
-  const addTodo = text => {
-    const newTodos = [ {text} ,...todos ];
+  const addTodo = (title,text) => {
+    const newTodos = [{ title ,text},...todos ];
     setTodos(newTodos);
   };
+
 
   const removeTodo = index => {
     const newTodos = [...todos];

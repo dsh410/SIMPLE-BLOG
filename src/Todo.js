@@ -9,7 +9,7 @@ function Todo({ todo, index,  removeTodo, likedTodo, unLikedTodo },props) {
     return (
         <div>
           
-            <h4 className="post-title">title:{todo.title}</h4> 
+            <h4 className="post-title">Title:{todo.title}</h4> 
       <div
         className="todo"
         style={{ textDecoration: todo.isCompleted ? "line-through" : "" }} 

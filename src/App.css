@@ -2,7 +2,8 @@
 .App{
   background-color: #F5BE99;
   height:100vh;
-  
+  overflow-x : hidden; 
+  overflow-y : scroll;
   }
   .menu{
       /* border:1px solid blue; */
@@ -103,6 +104,7 @@
 
     .heart-shape{
       font-size:2em;
+     
     }
     .trash-can{
       font-size:2em;
