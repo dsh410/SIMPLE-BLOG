@@ -18,7 +18,7 @@ function TodoForm({ addTodo,isPosting } ) {
     return (
         
       <form onSubmit={handleSubmit} className="form">
-       
+        <h3 className="create-blog-post-title">create blog post</h3>
         <input type="text"
           className="title-input"
           value={blogTitle}
@@ -30,7 +30,7 @@ function TodoForm({ addTodo,isPosting } ) {
         <textarea
           type="text"
           className="text-area"
-          placeholder="Body..."
+          placeholder="Blog Post..."
           value={blog}
             onChange={e => setBlog(e.target.value)}
             required

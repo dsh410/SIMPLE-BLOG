@@ -102,6 +102,13 @@
       color:white;
     }
 
+    .create-blog-post-title{
+      margin-left: 25%;
+      margin-bottom: 10%;
+      color:white;
+      text-transform: uppercase;
+    }
+
     .heart-shape{
       font-size:2em;
      
@@ -138,6 +145,8 @@
       /* border:2px solid blue; */
       height:50%;
     }
+
+    
 
   
   
