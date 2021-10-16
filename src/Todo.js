@@ -7,7 +7,7 @@ function Todo({ todo, index, removeTodo, likedTodo, unLikedTodo }, props) {
       <h4 className="post-title">Title:{todo.title}</h4>
       <div
         className="todo"
-        style={{ textDecoration: todo.isCompleted ? "line-through" : "" }}
+      
       >
         <p> {todo.text}</p>
         <div>
