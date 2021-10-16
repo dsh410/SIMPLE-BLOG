@@ -10,7 +10,9 @@ function Todo({ todo, index, removeTodo, likedTodo, unLikedTodo }, props) {
       
       >
         <p> {todo.text}</p>
-        <div>
+       
+      </div>
+      <div className='action-btn'>
           <AiFillHeart
             className="heart-shape"
             style={{ color: todo.isLiked ? "#F19CBB" : "#46444F" }}
@@ -24,7 +26,6 @@ function Todo({ todo, index, removeTodo, likedTodo, unLikedTodo }, props) {
             onClick={() => removeTodo(index)}
           ></RiDeleteBin2Line>
         </div>
-      </div>
     </div>
   );
 }

@@ -101,9 +101,12 @@ label {
   color: white;
   text-transform: uppercase;
 }
-
+.action-btn{
+background-color:white;
+}
 .heart-shape {
   font-size: 2em;
+  margin-left: 82%;
 }
 .trash-can {
   font-size: 2em;
